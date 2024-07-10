@@ -1,12 +1,5 @@
 @import './base.css';
 
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  font-weight: normal;
-}
-
 a,
 .green {
   text-decoration: none;
@@ -24,12 +17,27 @@ a,
 @media (min-width: 1024px) {
   body {
     display: flex;
-    place-items: center;
+    /* place-items: top; */
   }
+}
 
-  #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
-  }
+#app {
+  width: 100%;
+  padding: 2rem;
+  font-weight: normal;
+}
+
+#view-area {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  margin-top: 64px;
+}
+
+#auto-example {
+  max-width: 1024px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 0 2rem;
 }
