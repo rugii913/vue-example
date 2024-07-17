@@ -11,6 +11,7 @@ import HelloVue from "./components/official-example/HelloVue.vue";
 import HandlingUserInput from "./components/official-example/HandlingUserInput.vue";
 import AttributeBindings from "./components/official-example/AttributeBindings.vue";
 import ConditionalsAndLoops from "./components/official-example/ConditionalsAndLoops.vue";
+import FormBindings from "./components/official-example/FormBindings.vue"
 
 const routes = {
   "": HomePage,
@@ -19,6 +20,7 @@ const routes = {
   "handling-user-input": HandlingUserInput,
   "attribute-bindings": AttributeBindings,
   "conditionals-and-loops": ConditionalsAndLoops,
+  "form-bindings": FormBindings,
 }
 
 export default {
@@ -57,6 +59,8 @@ export default {
       <a href="#attribute-bindings">속성 바인딩</a>
       <p>|</p>
       <a href="#conditionals-and-loops">조건문과 반복문</a>
+      <p>|</p>
+      <a href="#form-bindings">폼 바인딩</a>
     </div>
   </div>
   <div id="view-area">
