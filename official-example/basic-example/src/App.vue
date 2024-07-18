@@ -13,6 +13,7 @@ import AttributeBindings from "./components/official-example/AttributeBindings.v
 import ConditionalsAndLoops from "./components/official-example/ConditionalsAndLoops.vue";
 import FormBindings from "./components/official-example/FormBindings.vue";
 import SimpleComponent from "./components/official-example/SimpleComponent.vue";
+import SimpleMarkdownEditor from "./components/official-example/SimpleMarkdownEditor.vue";
 
 const routes = {
   "": HomePage,
@@ -23,6 +24,7 @@ const routes = {
   "conditionals-and-loops": ConditionalsAndLoops,
   "form-bindings": FormBindings,
   "simple-component": SimpleComponent,
+  "markdown": SimpleMarkdownEditor,
 }
 
 export default {
@@ -52,7 +54,7 @@ export default {
       <a href="#auto-generated-example">Vue.js auto generated example</a>
     </div>
     <div class="toc">
-      <p>공식 예제</p>
+      <p>공식 예제 기초 </p>
       <p>♬</p>
       <a href="#hello-view">안녕 Vue</a>
       <p>|</p>
@@ -65,6 +67,11 @@ export default {
       <a href="#form-bindings">폼 바인딩</a>
       <p>|</p>
       <a href="#simple-component">단순한 컴포넌트</a>
+    </div>
+    <div class="toc">
+      <p>공식 예제 실습 </p>
+      <p>♬</p>
+      <a href="#markdown">단순한 Markdown 편집기</a>
     </div>
   </div>
   <div id="view-area">
