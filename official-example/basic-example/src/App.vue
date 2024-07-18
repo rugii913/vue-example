@@ -11,7 +11,8 @@ import HelloVue from "./components/official-example/HelloVue.vue";
 import HandlingUserInput from "./components/official-example/HandlingUserInput.vue";
 import AttributeBindings from "./components/official-example/AttributeBindings.vue";
 import ConditionalsAndLoops from "./components/official-example/ConditionalsAndLoops.vue";
-import FormBindings from "./components/official-example/FormBindings.vue"
+import FormBindings from "./components/official-example/FormBindings.vue";
+import SimpleComponent from "./components/official-example/SimpleComponent.vue";
 
 const routes = {
   "": HomePage,
@@ -21,6 +22,7 @@ const routes = {
   "attribute-bindings": AttributeBindings,
   "conditionals-and-loops": ConditionalsAndLoops,
   "form-bindings": FormBindings,
+  "simple-component": SimpleComponent,
 }
 
 export default {
@@ -61,6 +63,8 @@ export default {
       <a href="#conditionals-and-loops">조건문과 반복문</a>
       <p>|</p>
       <a href="#form-bindings">폼 바인딩</a>
+      <p>|</p>
+      <a href="#simple-component">단순한 컴포넌트</a>
     </div>
   </div>
   <div id="view-area">
