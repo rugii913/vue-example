@@ -15,6 +15,7 @@ import FormBindings from "./components/official-example/FormBindings.vue";
 import SimpleComponent from "./components/official-example/SimpleComponent.vue";
 import SimpleMarkdownEditor from "./components/official-example/SimpleMarkdownEditor.vue";
 import FetchingData from "./components/official-example/FetchingData.vue";
+import Grid from "./components/official-example/Grid.vue";
 
 const routes = {
   "": HomePage,
@@ -27,6 +28,7 @@ const routes = {
   "simple-component": SimpleComponent,
   "markdown": SimpleMarkdownEditor,
   "fetching-data": FetchingData,
+  "grid": Grid,
 }
 
 export default {
@@ -76,6 +78,8 @@ export default {
       <a href="#markdown">단순한 Markdown 편집기</a>
       <p>|</p>
       <a href="#fetching-data">데이터 가져오기</a>
+      <p>|</p>
+      <a href="#grid">정렬과 필터가 있는 그리드</a>
     </div>
   </div>
   <div id="view-area">
