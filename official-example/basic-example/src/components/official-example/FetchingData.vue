@@ -46,7 +46,12 @@ export default {
   }),
 
   created() {
-    // 시작 시(created) fetchData()를 호출하여 데이터를 가져옴
+    /* 
+    created는 옵션 API가 초기화된 후를 의미함 → 이 때 fetchData()를 호출하여 데이터를 가져옴
+    - (공식 홈페이지 → 가이드 → 핵심 가이드 → 생명주기 훅) https://v3-docs.vuejs-korea.org/guide/essentials/lifecycle.html
+    */
+    // 
+
     // fetch on init
     this.fetchData()
   },
