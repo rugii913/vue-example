@@ -9,7 +9,7 @@ const router = createRouter({
       name: "home",
       component: HelloWorldView,
     },
-/*     {
+    /*     {
       path: "/about",
       name: "about",
       // route level code-splitting
