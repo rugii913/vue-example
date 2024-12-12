@@ -17,6 +17,7 @@ import SimpleMarkdownEditor from "./components/official-example/SimpleMarkdownEd
 import FetchingData from "./components/official-example/FetchingData.vue";
 import Grid from "./components/official-example/Grid.vue";
 import UsingVueDatePicker from "./components/using-libraries/UsingVueDatePicker.vue";
+import Composable from "./components/guide/reusability/Composable.vue";
 
 const routes = {
   "": HomePage,
@@ -30,6 +31,7 @@ const routes = {
   "markdown": SimpleMarkdownEditor,
   "fetching-data": FetchingData,
   "grid": Grid,
+  "composable": Composable,
   "vue-datepicker": UsingVueDatePicker,
 }
 
@@ -82,6 +84,11 @@ export default {
       <a href="#fetching-data">데이터 가져오기</a>
       <p>|</p>
       <a href="#grid">정렬과 필터가 있는 그리드</a>
+    </div>
+    <div class="toc">
+      <p>가이드 - 재사용성</p>
+      <p>♬</p>
+      <a href="#composable">composable</a>
     </div>
     <div class="toc">
       <p>여러 라이브러리들</p>
