@@ -1,4 +1,5 @@
-import { onMounted, onUnmounted, ref } from "vue";
+import { ref } from "vue";
+import { useEventListener } from "./event";
 
 export function useMouseTrack() {
     // composable로 캡슐화된 내부에서 관리되는 상태
@@ -11,10 +12,12 @@ export function useMouseTrack() {
         y.value = mousemoveEvent.pageY;
     }
 
-    // composable은 이를 사용하는 component의 생명주기에 연결되어 side effect를 설정 및 해제할 수 있음
-    onMounted(() => window.addEventListener("mousemove", update));
-    onUnmounted(() => window.removeEventListener("mousemove", update));
-
+    useEventListener(window, "mousemove", update);
+    /* 
+     * cf. 이 useMouseTrack()을 호출하는 각 component instance는 서로 간섭하지 않는 x, y 상태의 복사본을 생성
+     * - 컴포넌트 간 공유되는 상태를 관리하려면 다음 참고 → https://ko.vuejs.org/guide/scaling-up/state-management
+     *   - 또는 pinia, vuex와 같은 상태 관리 라이브러리를 사용
+    */
     // 관리되는 상태를 return value로 노출
     return { x, y };
 }
