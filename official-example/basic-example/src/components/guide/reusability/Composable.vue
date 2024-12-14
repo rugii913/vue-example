@@ -4,6 +4,7 @@
         <div>x: {{ x }}, y: {{ y }}</div>
         <br />
         <div>fetch 결과</div>
+        <input type="text" :value="url" @input="event => { url = event.target.value }" />
         <div v-if="data">data</div>
         <div v-if="data">{{ data }}</div>
         <div v-if="error">error</div>
@@ -12,16 +13,23 @@
 </template>
 
 <script>
-import { defineComponent } from "vue";
+import { defineComponent, ref } from "vue";
 import { useMouseTrack } from "./composables/mouseTrack";
 import { useFetch } from "./composables/fetch";
 
 export default defineComponent({
     setup() {
         const { x, y } = useMouseTrack();
-        const { data, error } = useFetch("...");
 
-        return { x, y, data, error };
+        const url = ref("/initial-url");
+        const { data, error } = useFetch(() => url.value);
+
+        return { x, y, url, data, error };
+    },
+    data() {
+        return {
+            fetchUrl: this.url,
+        };
     },
 });
 </script>

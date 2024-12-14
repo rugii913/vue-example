@@ -1,17 +1,23 @@
-import { ref } from "vue";
+import { ref, toValue, watchEffect } from "vue";
 
-export function useFetch(url) {
+export function useFetch(urlGetter) {
     const data = ref(null);
     const error = ref(null);
 
-    fetch(url)
-        .then((response) => response.json())
-        .then((json) => {
-            data.value = json;
-        })
-        .catch((reason) => {
-            error.value = reason;
-        });
+    const fetchData = () => {
+        fetch(toValue(urlGetter))
+            .then((response) => response.json())
+            .then((json) => {
+                data.value = json;
+            })
+            .catch((reason) => {
+                error.value = reason;
+            });
+    };
+
+    watchEffect(() => {
+        fetchData();
+    });
 
     return { data, error };
 }
